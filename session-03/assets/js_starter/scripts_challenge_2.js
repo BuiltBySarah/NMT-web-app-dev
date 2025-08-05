@@ -18,9 +18,19 @@ const userObject = {
 };
 
 // Clone the complexObject three times using the spread operator to clone.
+function deepClone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+
+const clone1 = deepClone(userObject);
+const clone2 = {...clone1};
+const clone3 = {...clone1};
 
 // Store the cloned objects in an array
+const cloneArray = [clone1, clone2, clone3];
 
 // Sort the array of cloned objects based on the 'age' property in ascending order
+cloneArray.sort((a, b) => (a.age > b.age) ? 1 : -1)
 
 // Log the sorted array to the console
+console.log(cloneArray);
