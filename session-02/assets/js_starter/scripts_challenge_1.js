@@ -9,7 +9,7 @@ numbers.pop()
 numbers.unshift(5)
 
 // Use the slice() method to exclude the first 3 elements and return a new array
-numbers.slice(0,2)
+const slice = numbers.slice(0,2)
 
 // Set the value of the output field inner html to the new array
-document.getElementById("OutputField").innerHTML = numbers;
+document.getElementById("OutputField").innerHTML = slice;
