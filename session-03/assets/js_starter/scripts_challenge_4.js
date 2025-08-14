@@ -16,7 +16,7 @@ function inputHandler(event) {
  * Clear all of the saved fields from storage
  */
 function clearStorage() {
-  //
+  localStorage.removeItem
 }
 
 /**
@@ -29,3 +29,7 @@ function loadSaved() {
 // Load saved data from localStorage
 
 // Listen for DOM events
+
+//keystrokes
+//wipe on reset
+//save on submit
