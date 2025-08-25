@@ -1,5 +1,5 @@
-//Method to handle buttons
-function handleClick(buttonId, clickType) {
+//Module to handle buttons
+export function handleClick(buttonId, clickType) {
     let button = document.getElementById(buttonId);
 
     if (clickType === "click") {
@@ -18,7 +18,3 @@ function handleClick(buttonId, clickType) {
         document.getElementById("postContainer").innerHTML = "Not a valid click event."
     }
 }
-
-handleClick("button1", "click");
-handleClick("button2", "mouseover");
-handleClick("button3", "dblclick");
