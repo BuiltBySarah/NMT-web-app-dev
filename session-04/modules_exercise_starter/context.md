@@ -14,8 +14,13 @@ First, review the current state of the application. Open the HTML and JavaScript
 **Questions to Consider:**
 
 - How are different parts of the UI organised in the HTML?
+Different parts of the UI are organised by books, Latest News, buttons, and posts.
+
 - How is the JavaScript code interacting with the HTML elements?
+Using the DOM
+
 - What are the key functionalities that users interact with?
+Click, hover and double click buttons
 
 ### 2. Identifying Reusable Components
 
@@ -24,7 +29,11 @@ Think about the parts of the UI that can be separated into reusable components. 
 **Questions to Consider:**
 
 - Which parts of the UI are repeated or have similar structures?
+Books, buttons, posts
+
 - Can any of these parts be abstracted into a function or a class?
+Books and posts could be a class
+Buttons could be a function
 
 ### 3. Event Handling
 
@@ -33,7 +42,10 @@ Event handling is a crucial part of any interactive application. Consider how yo
 **Questions to Consider:**
 
 - What events are being handled in the current application?
+intialise app, click, hover, double click
+
 - Why you seperate(abstract) event handling logic into a separate module?
+All events could be handled in separate document
 
 ### 4. DOM Manipulation
 
@@ -42,7 +54,10 @@ Manipulating the DOM is necessary for updating the UI based on user interactions
 **Questions to Consider:**
 
 - What DOM updates are being made in response to user interactions?
+Buttons
+
 - How can you create functions that hold(encapsulate) these updates?
+create function for click, double click, etc.
 
 ### 5. Creating a `Post` Class
 
@@ -51,7 +66,10 @@ In applications where you need to manage structured data like blog posts, having
 **Questions to Consider:**
 
 - What data and behaviours are associated with a post in your application?
+Bottom section - post title and content
+
 - How can you create a class that encapsulates this data and behaviour?
+Contructor, method
 
 ### 6. Modularising the Code
 
@@ -60,7 +78,10 @@ Based on your answers to the previous steps, start modularising the code. Create
 **Questions to Consider:**
 
 - How will you organise your modules to keep the code clean and maintainable?
+Make sure code is scoped, different files, export/import
+
 - How will these modules interact with each other?
+They will interact with by importing into one file
 
 ## Example Approach
 
