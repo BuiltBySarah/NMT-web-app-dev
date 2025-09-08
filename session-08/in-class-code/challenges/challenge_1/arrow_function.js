@@ -1,7 +1,6 @@
 // Convert the following code to an arrow function assigned to a getFull name variable
-function getFullName() {
-  return user.firstName + " " + user.lastName;
-}
+let getFullName = objectName => objectName.firstName + " " + objectName.lastName;
+
 
 const userObject = {
   firstName: "John",
