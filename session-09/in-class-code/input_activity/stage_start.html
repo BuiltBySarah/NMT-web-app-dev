@@ -14,7 +14,7 @@
   <body>
     <!-- Other HTML inputs and buttons -->
     <form>
-      <div class="field">
+      <div class="field" id="react-date-input">
         <label class="label">Date (YYYY-MM-DD)</label>
         <div class="control">
           <input class="input" type="date" />
@@ -52,5 +52,39 @@
     </form>
 
     <div id="apod-content"></div>
+
+    <script type="text/babel">
+      let newDate = "";
+
+      const inputStyle = {
+        margin: "5px",
+        padding: "10px",
+        /*Use camel casing for those with 2 words*/
+        backgroundColor: "blue"
+      };
+
+      const handleChange = (event) => {
+        const newDate = event.target.value;
+        debugger;
+      };
+
+      //debugger
+
+      function DateInputComponent() {
+        return (
+          <input class="input" 
+          type="date" 
+          style={inputStyle} 
+          value={newDate} 
+          onChange={handleChange} />
+        );
+      }
+
+      const root = ReactDOM.createRoot(
+        document.getElementById("react-date-input")
+      );
+      root.render(<DateInputComponent />);
+    </script>
+
   </body>
 </html>
