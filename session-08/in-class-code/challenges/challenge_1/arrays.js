@@ -27,10 +27,11 @@ const user = {
 };
 
 // The following code tries to add a new skill to the user's skills array but has an error.
-const addSkill = (user, skill) => {
-  user.skills = skill;
+const addSkill = (objectName, newSkill) => {
+  objectName.skills.push(newSkill);
 };
 
 // Fix the array method usage.
 addSkill(user, "React");
 console.log(user.skills);
+
