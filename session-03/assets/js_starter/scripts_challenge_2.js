@@ -1,4 +1,4 @@
-// Challenge 2 Starter
+// Challenge 2
 const userObject = {
   firstName: "John",
   lastName: "Doe",
@@ -15,6 +15,11 @@ const userObject = {
     linkedIn: "linkedin.com/in/johndoe",
   },
   isEmployed: true,
+
+  // Method to change the age property
+  changeAge(newAge) {
+    this.age = newAge;
+  },
 };
 
 // Clone the complexObject three times using the spread operator to clone.

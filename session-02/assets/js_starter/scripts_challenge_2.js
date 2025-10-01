@@ -1,4 +1,4 @@
-// Challenge 2 Starter
+// Challenge 2 Solution
 // Initialise the arrays
 let array1 = [1, 2, 3, 2];
 let array2 = [4, 5, 6, 4];

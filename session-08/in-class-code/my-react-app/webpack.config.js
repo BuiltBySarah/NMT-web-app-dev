@@ -39,8 +39,7 @@ module.exports = {
   // Plugins for additional functionality
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html", // Use your own HTML template
-      filename: "index.html",
+      template: "./public/index.html", // Use your own HTML template
     }),
   ],
 
