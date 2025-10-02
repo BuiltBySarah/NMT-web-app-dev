@@ -9,6 +9,32 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-const App = () => <h1>Hello, React!</h1>;
+//  const App = () => <h1>Hello, React!</h1>;
 
-createRoot(document.getElementById("root")).render(<App />);
+//  createRoot(document.getElementById("root")).render(<App />);
+
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
+//Usage example
+function App() {
+    const items = [
+        { id: 1, title: "First Item" },
+        { id: 2, title: "Second Item" },
+        { id: 3, title: "Third Item" },
+    ];
+// Your code goes here to return JSX
+// Hint: you will need to loop through these items
+    function ItemList({ items }) {
+    //template
+    return (
+        <ol>
+        {items.map((item)=> (
+            <li key={item.id}>{item.title}</li>
+            ))}
+        </ol>
+    );
+    }
+    // render
+    return <ItemList items={items} />
+}
+
