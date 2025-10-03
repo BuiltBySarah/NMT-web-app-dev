@@ -18,10 +18,7 @@ const userObject = {
 
 // Fix the ternary operator to correctly reflect the user's employment status so that:
 // if they are employed and a student they are not looking for work.
-const employmentStatus = userObject.isEmployed
-  ? "Employed"
-  : "Unemployed"
-  ? "Looking for work"
-  : "Not looking";
+const employmentStatus = userObject.isEmployed || userObject.isStudent ? "not looking for work" : "looking for work"
 
-console.log(`${userObject.name} is ${employmentStatus}`);
+console.log(`${userObject.firstName} is ${employmentStatus}`);
+console.log(userObject);
