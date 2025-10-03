@@ -19,7 +19,7 @@ const userObject = {
 // This function does not navigate the userObject correctly
 function updateAddress(user, newStreet) {
   // console.log(user, newStreet)
-  user.address = newStreet;
+  user.address.street = newStreet;
 }
 
 // Fix the object property assignment.
