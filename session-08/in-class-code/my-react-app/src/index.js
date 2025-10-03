@@ -2,19 +2,20 @@
 //Remove type: 'commonjs' from package.json file
 
 import React from "react";
-import { createRoot } from "react-dom/client";
+// import { createRoot } from "react-dom/client";
 import ReactDOM from "react-dom/client"; // Note the change in import path
 import Lifecycle from "./LifeCycle";
 
 function ItemList({ items }) {
   // Your code goes here to return JSX
+
   return (
     <ol>
       {items.map((item) => (
-        <li key={item.id}>{item.title}</li>
+         <li key={item.id}>{item.title}</li>
       ))}
     </ol>
-  );
+   );
 }
 
 // Usage example
@@ -37,15 +38,15 @@ function App() {
 
   return (
     <>
-      <Lifecycle />
-      <ItemList items={items} />
-      {/* <UserProfile
-        firstName="John"
-        lastName="Doe"
-        age={30}
-        isStudent={false}
-        skills={["JavaScript", "React", "CSS"]}
-      /> */}
+    <Lifecycle />
+    <ItemList items={items} />
+    <UserProfile
+    firstName="John"
+    lastName="Doe"
+    age={30}
+    isStudent={false}
+    skills={["JavaScript", "React", "CSS"]}
+      />
     </>
   );
 }
@@ -54,3 +55,4 @@ export default App;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
+
