@@ -1,4 +1,8 @@
+//Second problem I had:
+//Remove type: 'commonjs' from package.json file
+
 import React from "react";
+import { createRoot } from "react-dom/client";
 import ReactDOM from "react-dom/client"; // Note the change in import path
 import Lifecycle from "./LifeCycle";
 
