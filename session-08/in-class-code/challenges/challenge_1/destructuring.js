@@ -19,8 +19,8 @@ const userObject = {
 // Destructure the entire userObject correctly so that all values in the structure have a variable
 const {
   firstName,
-  hello2,
-  yearsOld,
+  lastName,
+  age,
   isStudent,
   address,
   skills,
@@ -33,16 +33,6 @@ const {
 // const twitterHandle = socialProfiles.twitter;
 
 const greeting =
-`Hello, my name is ${firstName} ${hello2}. I am ${yearsOld}, living on ${address.street}. You can find me on Twitter as ${socialProfiles.twitter}` 
-//  firstname +
-//   " " +
-//  lastname +
-//  ". I am " +
-// yearsOld +
-//   " years old, living on " +
-//  street +
-//  ". You can find me on Twitter as " +
-// twitterhandle +
-//  ".";
+`Hello, my name is ${firstName} ${lastName}. I am ${age}, living on ${address.street}. You can find me on Twitter as ${socialProfiles.twitter}` 
 
 console.log(greeting);
