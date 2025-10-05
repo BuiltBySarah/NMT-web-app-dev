@@ -73,7 +73,16 @@
         // List example
         return (
           // Dont foget to wrap you list in the <ul> or <ol>tag
-          <></>
+          <ul>
+            {userList.map((user) => (
+              <li key={user.firstName}>
+                {user.firstName}
+                {user.lastName}
+                {user.age}
+                {user.skills}
+              </li>
+            ))} 
+          </ul>
         );
       }
       // Correct usage of ReactDOM.createRoot
