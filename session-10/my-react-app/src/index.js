@@ -1,3 +1,5 @@
+//3rd issue - didn't need to install React from Terminal? Used webpack code from previous session
+
 // updates for activity 1
 import React from "react";
 import ReactDOM from "react-dom/client";
