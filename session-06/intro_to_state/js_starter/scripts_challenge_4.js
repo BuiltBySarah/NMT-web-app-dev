@@ -4,10 +4,18 @@
  * @param {String} selector The selector for the target elementent
  * @param {Object} options  Component options
  */
+let MyListComponent = function (selector, options) {
+  this.element = document.querySelector(selector);
+  this.data = options.data;
+  this.template = options.template;
+};
 
 /**
  * Render a new UI
  */
+MyListComponent.prototype.render = function () {
+  this.element.innerHTML = this.template(this.data);
+};
 
 // The list of books
 let MyListComponent = 

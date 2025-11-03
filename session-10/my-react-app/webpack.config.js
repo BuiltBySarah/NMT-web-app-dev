@@ -6,6 +6,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
     clean: true,
   },
   module: {
@@ -20,18 +21,6 @@ module.exports = {
           },
         },
       },
-      // part of activity 1
-      {
-        test: /\.css$/, // Match any .css file
-        use: [
-          "style-loader", // Injects CSS into the DOM
-          "css-loader", // Turns CSS into CommonJS
-        ],
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i, // Handle image files
-        type: "asset/resource", // Asset modules for static files
-      },
     ],
   },
   plugins: [
@@ -40,9 +29,16 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: "./dist",
-    port: 3000, // Server will be hosted at http://localhost:3000
-    open: true, // Opens the browser after server has started
+    port: 3000,
+    static: {
+      directory: path.join(__dirname, "public"),
+    },
+    compress: true,
+    headers: {
+      "Content-Security-Policy":
+        "default-src 'self'; script-src 'self' 'unsafe-eval'; connect-src 'self' http://localhost:3000;",
+    },
+    historyApiFallback: true,
   },
   //   // Enable source maps for easier debugging in development mode
 devtool: "inline-source-map",
